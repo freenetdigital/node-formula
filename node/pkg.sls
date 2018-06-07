@@ -25,4 +25,5 @@ nodejs:
     - reload_modules: true
 {%- if salt['pillar.get']('node:version') %}
     - version: {{ salt['pillar.get']('node:version') }}
+    - hold: True
 {%- endif %}
